@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Features</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources | Castro</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Resources Page</h1>
-  <p>This is the Resources screen.</p>
-  <a href="index.html">← Back to Home</a>
+
+<header class="navbar">
+  <div class="logo">slack</div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav id="navMenu">
+    <a class="nav-link" href="features.html">Features</a>
+    <a class="nav-link" href="solutions.html">Solutions</a>
+    <a class="nav-link" href="enterprise.html">Enterprise</a>
+    <a class="nav-link" href="resources.html">Resources</a>
+    <a class="nav-link" href="pricing.html">Pricing</a>
+  </nav>
+
+  <div class="nav-buttons">
+    <a href="index.html" class="btn-outline">← Back to Home</a>
+    <button class="btn-primary" id="navSignUp">Sign Up</button>
+  </div>
+</header>
+
+<section class="features-hero">
+  <h1>Resources</h1>
+  <p>Learn, explore, and get the most out of Slack.</p>
+</section>
+
+<section class="features-grid">
+  <div class="feature-card">
+    <h3>Help Center</h3>
+    <p>Guides and tutorials to get started fast.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Community</h3>
+    <p>Join discussions and learn from other users.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Blog</h3>
+    <p>Read about productivity and teamwork tips.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Developers</h3>
+    <p>Build apps and integrations for Slack.</p>
+  </div>
+</section>
+
 </body>
 </html>
