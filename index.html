@@ -4,15 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Slack | Castro</title>
-
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
-
   <div class="logo">slack</div>
 
   <div class="hamburger" id="hamburger">
@@ -27,13 +25,14 @@
     <a class="nav-link" href="pricing.html">Pricing</a>
   </nav>
 
+ 
+
   <div class="nav-buttons">
-    <button class="btn-outline" id="findPlanBtn">Find Your Plan →</button>
     <button class="btn-primary" id="navSignUp">Sign Up</button>
   </div>
-
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
     <h1>Made for people.<br>Built for productivity.</h1>
@@ -57,10 +56,7 @@
     <span class="close" onclick="closePricing()">&times;</span>
     <h2 class="pricing-title">Choose a plan built for businesses</h2>
     <p class="pricing-sub">Start free, upgrade anytime.</p>
-
-    <!-- ADDED PRICING TABLE -->
     <div class="plans">
-
       <div class="plan-card">
         <h3>Free</h3>
         <p class="plan-desc">A simpler way to chat and collaborate</p>
@@ -72,7 +68,6 @@
           <li>1:1 meetings</li>
         </ul>
       </div>
-
       <div class="plan-card">
         <h3>Pro</h3>
         <p class="plan-desc">Drive productivity in one place</p>
@@ -84,7 +79,6 @@
           <li>Group meetings</li>
         </ul>
       </div>
-
       <div class="plan-card featured">
         <div class="badge">Best Value</div>
         <h3>Business+</h3>
@@ -97,14 +91,9 @@
           <li>SAML & SCIM</li>
         </ul>
       </div>
-
     </div>
-    <!-- END ADD -->
-
   </div>
 </div>
-
-
 
 <!-- SIGN UP MODAL -->
 <div class="modal" id="signUpModal">
@@ -130,15 +119,15 @@ hamburger.addEventListener("click", () => {
 
 /* PRICING MODAL */
 const pricingModal = document.getElementById("pricingModal");
-document.getElementById("findPlanBtn").onclick = () => pricingModal.style.display = "flex";
+document.getElementById("findPlanBtn")?.addEventListener("click", () => {
+  pricingModal.style.display = "flex";
+});
 function closePricing() { pricingModal.style.display = "none"; }
 
 /* SIGN UP MODAL */
 const signUpModal = document.getElementById("signUpModal");
-const navSignUp = document.getElementById("navSignUp");
-const heroSignUp = document.getElementById("heroSignUp");
-
-navSignUp.onclick = heroSignUp.onclick = () => signUpModal.style.display = "flex";
+document.getElementById("navSignUp")?.addEventListener("click", () => signUpModal.style.display = "flex");
+document.getElementById("heroSignUp")?.addEventListener("click", () => signUpModal.style.display = "flex");
 function closeSignUp() { signUpModal.style.display = "none"; }
 </script>
 
