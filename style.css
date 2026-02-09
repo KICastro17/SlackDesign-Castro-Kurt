@@ -6,34 +6,56 @@
   font-family: 'Inter', sans-serif;
   min-width: 0;
 }
+:root {
+  --nav-height: 80px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
 body {
-  background: #4a154b url("bg.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  min-height: 100dvh; /* fixes mobile + fullscreen issues */
+
+  background: #4a154b url("bg.jpg") no-repeat center center;
+  background-size: cover;
+
   color: white;
-  max-width: 100%;
   overflow-x: hidden;
+
   opacity: 0;
   transform: translateY(10px);
   animation: pageEnter 0.45s ease forwards;
 }
+
 
 /* ================= NAVBAR ================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+
+  height: var(--nav-height);
+  padding: 0 60px; /* vertical padding removed */
+
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  background: rgba(187, 187, 187, 0.101);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
+
 
 .logo {
   font-size: 28px;
   font-weight: 800;
 }
 
-nav {
+.nav {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -94,7 +116,7 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  margin-right: 15px;
+  /*margin-right: 15px;*/
 }
 
 .back-link:hover {
@@ -102,9 +124,22 @@ nav {
 }
 
 /* ================= HERO & FEATURES ================= */
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  height: calc(100dvh - var(--nav-height));
+  padding-top: 120px;
+
+  overflow: hidden;
+}
+
+
 .hero, .features-hero {
   padding: 80px 60px;
   gap: 40px;
+  color: #7a2a87;
 }
 
 .hero-text {
@@ -119,13 +154,14 @@ nav {
 .hero p, .features-hero p {
   margin-top: 15px;
   font-size: 18px;
-  color: #ddd;
+  color: #000000;;
 }
 
 .hero-buttons {
   margin-top: 30px;
   display: flex;
   gap: 15px;
+  border-radius: 30px;
 }
 
 .big {
@@ -144,11 +180,11 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  padding: 60px;
+  padding: 10px;
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(117, 117, 117, 0.725);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 16px;
@@ -193,7 +229,7 @@ nav {
 }
 
 .plan-card {
-  background: #f8f5f9;
+  background: rgba(117, 117, 117, 0.725);
   color: #111;
   padding: 25px;
   border-radius: 14px;
@@ -211,7 +247,7 @@ nav {
 
 .plan-desc {
   font-size: 14px;
-  color: #555;
+  color: #000000;
 }
 
 .price {
